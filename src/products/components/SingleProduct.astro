@@ -1,0 +1,17 @@
+---
+import SingleProductInfo from './SingleProductInfo.astro';
+import SingleProductDescription from './SingleProductDescription.astro';
+import SingleProductPicture from './SingleProductPicture.astro';
+
+const { product } = Astro.props;
+const { name, collection, year, available, image } = product;
+const info = { collection, available, name, year };
+const description = { collection, name };
+const picture = { name, image };
+---
+
+<article class='bg-white h-[400px] flex'>
+  <SingleProductInfo {...info} />
+  <SingleProductDescription {...description} />
+  <SingleProductPicture {...picture} />
+</article>

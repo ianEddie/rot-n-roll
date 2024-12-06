@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import MegadethIcon from '../assets/megadeth-icon.webp';
+import Available from './Available.astro';
+import Logo from 'src/ui/Logo.astro';
+
+const { name, collection, available, year } = Astro.props;
+---
+
+<div
+  class='font-primary h-full w-[30%] flex flex-col items-center justify-between py-5 px-3 gap-5 text-sm bg-orange-300'
+>
+  <p class='uppercase flex flex-col items-center text-center text-pretty'>
+    <strong>{collection}</strong>
+    <span class='mt-2 font-medium'>"{name}"</span>
+    <span>({year})</span>
+    <Available available={available} />
+  </p>
+  <Image
+    src={MegadethIcon}
+    alt={`${collection} icon`}
+    class='h-auto w-[80%] grayscale-[10%]'
+  />
+  <h4>
+    <Logo size='60' />
+  </h4>
+</div>
