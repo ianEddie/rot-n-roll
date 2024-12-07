@@ -1,3 +1,7 @@
+---
+import Background from '@ui/Background.astro';
+---
+
 <!doctype html>
 <html lang='en'>
   <head>
@@ -19,6 +23,7 @@
   </head>
   <body>
     <slot />
+    <Background />
   </body>
 </html>
 
@@ -49,6 +54,9 @@
   body {
     margin: 0;
     width: 100%;
-    min-height: 100dvh;
+    position: relative;
+    scroll-behavior: smooth;
+    scrollbar-color: #A1A1AA transparent;
+    scrollbar-width: thin;
   }
 </style>

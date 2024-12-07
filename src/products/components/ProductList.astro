@@ -4,7 +4,7 @@ import SingleProduct from './SingleProduct.astro';
 ---
 
 <div
-  class='w-full bg-stone-300 flex-grow grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10'
+  class='w-full flex-grow grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10'
 >
   {PRODUCTS_DATA.map((product) => <SingleProduct product={product} />)}
 </div>

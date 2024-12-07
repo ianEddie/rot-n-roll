@@ -8,20 +8,24 @@ const { name, collection, available, year } = Astro.props;
 ---
 
 <div
-  class='font-primary h-full w-[30%] flex flex-col items-center justify-between py-5 px-3 gap-5 text-sm bg-orange-300'
+  class='font-primary h-full w-[30%] flex flex-col items-center justify-between py-5 px-2 gap-5 text-sm'
 >
-  <p class='uppercase flex flex-col items-center text-center text-pretty'>
+  <p
+    class='h-1/2 uppercase flex flex-col justify-around text-center text-pretty bg-lime-300'
+  >
     <strong>{collection}</strong>
-    <span class='mt-2 font-medium'>"{name}"</span>
+    <span class='font-medium'>"{name}"</span>
     <span>({year})</span>
     <Available available={available} />
   </p>
   <Image
     src={MegadethIcon}
     alt={`${collection} icon`}
-    class='h-auto w-[80%] grayscale-[10%]'
+    class='h-auto w-[80%] grayscale-[10%] bg-pink-500'
   />
-  <h4>
+  <div
+    class='bg-stone-300 w-full flex justify-center items-end relative h-[10%]'
+  >
     <Logo size='60' />
-  </h4>
+  </div>
 </div>
