@@ -9,7 +9,8 @@ export default {
       fontFamily: {
         logo: ['DeathMohawk_PERSONAL_USE_ONLY'],
         alternative: ['OldeEnglish'],
-        primary: ['Author-Variable']
+        primary: ['Author-Variable'],
+        title: ['ClashDisplay-Variable']
       }
     }
   },

@@ -7,5 +7,6 @@ export interface Product {
   year: number;
   available: boolean;
   image: ImageMetadata;
+  price: number;
 }
 export type Products = Product[];

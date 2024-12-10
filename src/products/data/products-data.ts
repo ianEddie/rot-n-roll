@@ -8,7 +8,8 @@ export const PRODUCTS_DATA: Products = [
     name: 'Vic goes to hell',
     year: 1991,
     available: true,
-    image: PRODUCTS_IMAGES.VicGoesToHell
+    image: PRODUCTS_IMAGES.VicGoesToHell,
+    price: 23000
   },
   {
     id: '02',
@@ -16,7 +17,8 @@ export const PRODUCTS_DATA: Products = [
     name: 'Countdown To Extinction ',
     year: 1992,
     available: true,
-    image: PRODUCTS_IMAGES.Cte
+    image: PRODUCTS_IMAGES.Cte,
+    price: 23000
   },
   {
     id: '03',
@@ -24,7 +26,8 @@ export const PRODUCTS_DATA: Products = [
     name: 'Night Stalkers',
     year: 2023,
     available: true,
-    image: PRODUCTS_IMAGES.nightStalkers
+    image: PRODUCTS_IMAGES.nightStalkers,
+    price: 23000
   },
   {
     id: '04',
@@ -32,7 +35,8 @@ export const PRODUCTS_DATA: Products = [
     name: 'Holy wars...',
     year: 1990,
     available: true,
-    image: PRODUCTS_IMAGES.holyWars
+    image: PRODUCTS_IMAGES.holyWars,
+    price: 23000
   },
   {
     id: '05',
@@ -40,6 +44,25 @@ export const PRODUCTS_DATA: Products = [
     name: 'Christmas',
     year: 2020,
     available: true,
-    image: PRODUCTS_IMAGES.christmas
+    image: PRODUCTS_IMAGES.christmas,
+    price: 23000
+  },
+  {
+    id: '07',
+    collection: 'Iron Maiden',
+    name: 'Christmas',
+    year: 2020,
+    available: true,
+    image: PRODUCTS_IMAGES.christmas,
+    price: 23000
+  },
+  {
+    id: '08',
+    collection: 'Iron Maiden',
+    name: 'Christmas',
+    year: 2020,
+    available: true,
+    image: PRODUCTS_IMAGES.christmas,
+    price: 23000
   }
 ];
