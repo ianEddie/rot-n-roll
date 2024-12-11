@@ -1,4 +1,5 @@
-import MegadethIcon from '../assets/megadeth-icon.webp';
+import IronMaidenIcon from '@products/icons/IronMaidenIcon';
+import MegadethIcon from '../icons/MegadethIcon';
 import Available from './Available';
 import Logo from '@ui/Logo';
 
@@ -15,21 +16,23 @@ export default function SingleProductInfo({
   available,
   year
 }: Props) {
+  const hasMegadeth = collection === 'Megadeth';
   return (
-    <div className='font-primary h-full w-[30%] flex flex-col items-center justify-between py-5 px-3 gap-5'>
+    <div className='font-primary h-full flex flex-col items-center justify-between py-5 px-3 gap-5'>
+      {/* INFO */}
       <p className='h-1/2 uppercase flex flex-col text-center text-balance'>
         <strong className=''>{collection}</strong>
-        <span className='font-medium h-[40%] flex items-center text-[12px]'>
+        <span className='font-medium h-[40%] w-full flex items-center justify-center text-[12px]'>
           "{name}"
         </span>
         <span className='font-medium'>({year})</span>
         <Available available={available} />
       </p>
-      <img
-        src={MegadethIcon.src}
-        alt={`${collection} icon`}
-        className='h-auto w-[80%] aspect-[1/1] grayscale-[10%]'
-      />
+      {/* ICON */}
+      <picture className='w-full flex justify-center items-center h-[20%]'>
+        {hasMegadeth ? <MegadethIcon /> : <IronMaidenIcon />}
+      </picture>
+      {/* LOGO */}
       <div className='w-full flex justify-center items-center relative h-[10%]'>
         <Logo size='60' />
       </div>
