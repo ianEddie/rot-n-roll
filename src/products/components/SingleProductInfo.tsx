@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import IronMaidenIcon from '@products/icons/IronMaidenIcon';
 import MegadethIcon from '../icons/MegadethIcon';
 import Available from './Available';
@@ -20,14 +21,19 @@ export default function SingleProductInfo({
   return (
     <div className='font-primary h-full flex flex-col items-center justify-between py-5 px-3 gap-5'>
       {/* INFO */}
-      <p className='h-1/2 uppercase flex flex-col text-center text-balance'>
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className='h-1/2 uppercase flex flex-col text-center text-balance'
+      >
         <strong className=''>{collection}</strong>
         <span className='font-medium h-[40%] w-full flex items-center justify-center text-[12px]'>
           "{name}"
         </span>
         <span className='font-medium'>({year})</span>
         <Available available={available} />
-      </p>
+      </motion.p>
       {/* ICON */}
       <picture className='w-full flex justify-center items-center h-[20%]'>
         {hasMegadeth ? <MegadethIcon /> : <IronMaidenIcon />}

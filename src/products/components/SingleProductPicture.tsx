@@ -1,4 +1,5 @@
 import Logo from '@ui/Logo';
+import { motion } from 'framer-motion';
 
 interface Props {
   name: string;
@@ -12,7 +13,14 @@ export default function SingleProductPicture({ name, image }: Props) {
         <Logo size='140' />
       </h3>
 
-      <img
+      <motion.img
+        initial={{ rotateY: 180 }}
+        animate={{ rotateY: 0 }}
+        transition={{
+          type: 'spring',
+          visualDuration: 1.2,
+          bounce: 0.4
+        }}
         loading='lazy'
         width={image.width}
         height={image.height}

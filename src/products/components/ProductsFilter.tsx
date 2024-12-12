@@ -1,20 +1,25 @@
 import { useProducts } from '@products/hooks/useProducts';
+import style from '../styles/button.module.css';
 
 export default function ProductsFilter() {
-  const { filterByCollection, collections } = useProducts();
+  const { collections, selected, handleFilter } = useProducts();
   return (
-    <div className='flex flex-grow justify-end gap-5 '>
+    <div className='flex flex-grow justify-end gap-5'>
       <button
-        className='bg-zinc-950 px-4 py-1 text-zinc-50 font-title font-medium shadow-md  border border-transparent transition-all duration-300 hover:bg-zinc-50 hover:text-zinc-950 hover:shadow-md hover:shadow-zinc-950/50 hover:border hover:border-zinc-800 '
-        onClick={() => filterByCollection(null)}
+        className={`${style.button} ${selected === null ? style.selected : ''}`}
+        aria-pressed={selected === null}
+        onClick={() => handleFilter(null)}
       >
         Todo
       </button>
       {collections.map((collection) => (
         <button
-          className='bg-zinc-950 px-4 py-1 text-zinc-50 font-title font-medium shadow-md shadow-transparent border border-transparent transition-all duration-300 hover:bg-zinc-50 hover:text-zinc-950  hover:shadow-md hover:shadow-zinc-950/40 hover:border hover:border-zinc-800'
           key={collection}
-          onClick={() => filterByCollection(collection)}
+          className={`${style.button} ${
+            selected === collection ? style.selected : ''
+          }`}
+          aria-pressed={selected === collection}
+          onClick={() => handleFilter(collection)}
         >
           {collection}
         </button>

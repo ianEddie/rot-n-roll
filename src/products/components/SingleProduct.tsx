@@ -3,6 +3,7 @@ import SingleProductDescription from './SingleProductDescription';
 import SingleProductPicture from './SingleProductPicture';
 import BuyButton from './BuyButton';
 import Price from './Price';
+import { motion } from 'framer-motion';
 import type { Product } from '@products/types';
 
 export default function SingleProduct({ product }: { product: Product }) {
