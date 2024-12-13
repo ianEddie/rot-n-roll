@@ -12,7 +12,6 @@ export default function SingleProductPicture({ name, image }: Props) {
       <h3 className='h-[40%] w-full flex justify-center items-center overflow-hidden relative'>
         <Logo size='140' />
       </h3>
-
       <motion.img
         initial={{ rotateY: 180 }}
         animate={{ rotateY: 0 }}
@@ -26,7 +25,7 @@ export default function SingleProductPicture({ name, image }: Props) {
         height={image.height}
         src={image}
         alt={`Image of ${name}`}
-        className={`object-contain flex-grow px-1 `}
+        className={`object-contain flex-grow px-1 aspect-[1/1]`}
       />
     </div>
   );

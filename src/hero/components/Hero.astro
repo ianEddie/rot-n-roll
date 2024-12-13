@@ -1,11 +1,23 @@
----
-import Logo from '@ui/Logo';
----
-
-<section class='h-[90dvh] flex items-center justify-center font-logo'>
+<section
+    class='lg:h-[90dvh] h-[80dvh] flex justify-center items-center relative overflow-hidden lg:px-0 px-5'
+>
   <h1
-    class='w-full h-1/2 flex justify-center items-center relative overflow-hidden'
+    class='font-logo lg:text-[35vw] text-[70vw] absolute lg:-top-[35%] -top-[2%]'
   >
-    <Logo size='420' />
+    rotnroll
   </h1>
+  <article
+    class='lg:mt-[18%] mt-[60%] flex flex-col items-center gap-5'
+  >
+    <h2
+      class='text-center font-title font-medium lg:text-[1.6vw] text-base backdrop-blur-[5px] px-4 py-1 bg-zinc-300/20'
+    >
+      Diseños que se perdieron en el tiempo, traídos al presente.
+    </h2>
+    <a
+      href=''
+      class='bg-zinc-950 text-zinc-50 py-2 px-4 rounded-full font-primary font-medium cursor-pointer lg:text-[18px]'
+      >Seguinos en Instagram</a
+    >
+  </article>
 </section>

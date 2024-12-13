@@ -6,7 +6,7 @@ export default function ProductList() {
   const { filteredProducts } = useProducts();
 
   return (
-    <div className='w-full flex-grow grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10'>
+    <div className='w-full flex-grow grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-10 '>
       <AnimatePresence>
         {filteredProducts.map((product) => (
           <SingleProduct
