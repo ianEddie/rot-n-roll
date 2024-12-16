@@ -3,7 +3,6 @@ import SingleProductDescription from './SingleProductDescription';
 import SingleProductPicture from './SingleProductPicture';
 import BuyButton from './BuyButton';
 import Price from './Price';
-import { motion } from 'framer-motion';
 import type { Product } from '@products/types';
 
 export default function SingleProduct({ product }: { product: Product }) {
@@ -13,7 +12,7 @@ export default function SingleProduct({ product }: { product: Product }) {
   const picture = { name, image };
 
   return (
-    <article className='flex flex-col items-end gap-y-1'>
+    <article className='flex flex-col items-end gap-y-1 product'>
       <Price price={product.price} />
       <div className='grid grid-cols-[30%,12%,1fr] h-[380px] border border-zinc-800 bg-zinc-200/80 backdrop-blur-[2px]'>
         <SingleProductInfo {...info} />

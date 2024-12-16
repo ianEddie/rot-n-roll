@@ -9,15 +9,19 @@ type Store = {
 };
 
 export const useStore = create<Store>()((set) => ({
+  // GET ALL PRODUCTS
   allProducts: PRODUCTS_DATA,
+  // GET THE FILTERED PRODUCTS
   filteredProducts: PRODUCTS_DATA,
+  // FUNCTION TO FILTER THE PRODUCTS
   filterByCollection: (collection) => {
     set((state) => ({
-      filteredProducts: collection
-        ? state.allProducts.filter(
-            (product) => product.collection === collection
-          )
-        : state.allProducts
+      filteredProducts:
+        collection === 'Todos'
+          ? state.allProducts
+          : state.allProducts.filter(
+              (product) => product.collection === collection
+            )
     }));
   }
 }));

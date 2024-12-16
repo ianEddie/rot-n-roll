@@ -5,13 +5,17 @@ export default function ProductsFilter() {
   const { collections, selected, handleFilter } = useProducts();
   return (
     <div className='flex flex-grow justify-end gap-5'>
+      {/* BUTTON FOR SHOW ALL PRODUCTS */}
       <button
-        className={`${style.button} ${selected === null ? style.selected : ''}`}
-        aria-pressed={selected === null}
-        onClick={() => handleFilter(null)}
+        className={`${style.button} ${
+          selected === 'Todos' ? style.selected : ''
+        }`}
+        aria-pressed={selected === 'Todos'}
+        onClick={() => handleFilter('Todos')}
       >
         Todo
       </button>
+      {/* BUTTONS FOR FILTER BY COLLECTION */}
       {collections.map((collection) => (
         <button
           key={collection}

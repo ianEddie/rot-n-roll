@@ -58,7 +58,7 @@ export const PRODUCTS_DATA: Products = [
     year: 2024,
     available: true,
     image:
-      'https://res.cloudinary.com/dz1exvwhg/image/upload/v1733943367/ironmaiden-theFuturePast_yxokrk.webp',
+      'https://res.cloudinary.com/dz1exvwhg/image/upload/t_v2/v1733943367/ironmaiden-theFuturePast_yxokrk.webp',
     price: 23000
   },
   {
@@ -68,7 +68,7 @@ export const PRODUCTS_DATA: Products = [
     year: 2010,
     available: true,
     image:
-      'https://res.cloudinary.com/dz1exvwhg/image/upload/v1733943368/ironmaiden-transylvania_mqhi3x.webp',
+      'https://res.cloudinary.com/dz1exvwhg/image/upload/t_v2/v1733943368/ironmaiden-transylvania_mqhi3x.webp',
     price: 23000
   },
   {
@@ -78,7 +78,7 @@ export const PRODUCTS_DATA: Products = [
     year: 2000,
     available: true,
     image:
-      'https://res.cloudinary.com/dz1exvwhg/image/upload/v1733943367/ironmaiden-metal2000_dzo8gp.webp',
+      'https://res.cloudinary.com/dz1exvwhg/image/upload/t_v2/v1733943367/ironmaiden-metal2000_dzo8gp.webp',
     price: 23000
   }
 ];

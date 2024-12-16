@@ -1,19 +1,22 @@
 import { useStore } from '@products/store/products-store';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 export function useProducts() {
+  // GET THE FUNCTIONS FROM STORE
   const { allProducts, filterByCollection, filteredProducts } = useStore();
-  const [selected, setSelected] = useState<string | null>(null);
-  //
-  const handleFilter = (collection: string | null) => {
+  // CREATE A LOCAL STATE FOR SELECT A COLLECTION
+  const [selected, setSelected] = useState<string>('Todos');
+  // GET THE COLLECTIONS
+  const collections = useMemo(
+    () => [...new Set(allProducts.map((product) => product.collection))],
+    [allProducts]
+  );
+  // FUNCTION TO FILTER THE PRODUCTS BY COLLECTION
+  const handleFilter = (collection: string) => {
     setSelected(collection);
     filterByCollection(collection);
   };
-  //
-  const collections = [
-    ...new Set(allProducts.map((product) => product.collection))
-  ];
-
+  // RETURN
   return {
     filteredProducts,
     collections,
