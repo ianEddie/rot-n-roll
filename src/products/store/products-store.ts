@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import type { Product, Products } from '@products/types';
-import { PRODUCTS_DATA } from '@products/data/products-data';
+import type { Products } from '@products/types';
+import PRODUCTS_DATA from '@products/data/products-data.json';
 
 type Store = {
   allProducts: Products;

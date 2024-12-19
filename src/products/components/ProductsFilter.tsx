@@ -1,10 +1,10 @@
 import { useProducts } from '@products/hooks/useProducts';
-import style from '../styles/button.module.css';
+import style from '../styles/styles.module.css';
 
 export default function ProductsFilter() {
   const { collections, selected, handleFilter } = useProducts();
   return (
-    <div className='flex flex-grow justify-end gap-5'>
+    <div className=' flex flex-grow justify-end gap-5'>
       {/* BUTTON FOR SHOW ALL PRODUCTS */}
       <button
         className={`${style.button} ${

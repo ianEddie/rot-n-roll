@@ -13,12 +13,15 @@ export default function SingleProduct({ product }: { product: Product }) {
 
   return (
     <article className='flex flex-col items-end gap-y-1 product'>
+      {/* PRICE */}
       <Price price={product.price} />
-      <div className='grid grid-cols-[30%,12%,1fr] h-[380px] border border-zinc-800 bg-zinc-200/80 backdrop-blur-[2px]'>
+      {/* PRODUCT INFO */}
+      <div className='w-full grid grid-cols-[30%,12%,1fr] h-[380px] border border-zinc-800 bg-zinc-200/80 backdrop-blur-[2px]'>
         <SingleProductInfo {...info} />
         <SingleProductDescription {...description} />
         <SingleProductPicture {...picture} />
       </div>
+      {/* BUTTON */}
       <BuyButton />
     </article>
   );

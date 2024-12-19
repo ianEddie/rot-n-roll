@@ -21,11 +21,11 @@ export default function SingleProductPicture({ name, image }: Props) {
           bounce: 0.4
         }}
         loading='lazy'
-        width={image.width}
-        height={image.height}
+        width='150'
+        height='150'
         src={image}
         alt={`Image of ${name}`}
-        className={`object-contain flex-grow px-1 aspect-[1/1]`}
+        className={`object-contain w-full h-auto flex-grow px-1 aspect-[1/1]`}
       />
     </div>
   );

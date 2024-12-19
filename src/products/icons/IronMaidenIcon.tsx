@@ -2,20 +2,18 @@ import { motion } from 'framer-motion';
 
 export default function IronMaidenIcon() {
   const src =
-    'https://res.cloudinary.com/dz1exvwhg/image/upload/v1733949810/pngwing.com_garpav.png';
+    'https://res.cloudinary.com/dz1exvwhg/image/upload/t_eddie-45/v1734634230/eddie_fuhozr.webp';
   return (
     <motion.img
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{
-        type: 'spring',
-        visualDuration: 1.2,
-        bounce: 0.1
-      }}
+      transition={{ duration: 1 }}
       loading='lazy'
       src={src}
+      height='45'
+      width='45'
       alt='Eddie the head'
-      className='w-12 h-auto aspect-auto grayscale-[50%] drop-shadow-lg'
+      className='aspect-square grayscale-[50%] drop-shadow-lg'
     />
   );
 }
