@@ -2,7 +2,6 @@ import IronMaidenIcon from '@products/icons/IronMaidenIcon';
 import MegadethIcon from '../icons/MegadethIcon';
 import Available from './Available';
 import Logo from '@ui/Logo';
-import { motion } from 'framer-motion';
 
 interface Props {
   collection: string;
@@ -21,26 +20,21 @@ export default function SingleProductInfo({
   return (
     <div className='font-primary h-full flex flex-col items-center justify-between py-5 px-3 gap-5'>
       {/* INFO */}
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className='h-1/2 uppercase flex justify-between flex-col text-center text-balance'
-      >
+      <p className='h-1/2 uppercase flex justify-between flex-col text-center text-balance'>
         <strong>{collection}</strong>
         <span className='font-medium h-[40%] w-full flex items-center justify-center lg:text-[12px] text-[10px]'>
           "{name}"
         </span>
         <span className='font-medium'>({year})</span>
         <Available available={available} />
-      </motion.p>
+      </p>
       {/* ICON */}
       <picture className='w-full flex justify-center items-center h-[20%]'>
         {hasMegadeth ? <MegadethIcon /> : <IronMaidenIcon />}
       </picture>
       {/* LOGO */}
       <div className='w-full flex justify-center items-center relative h-[10%]'>
-        <Logo size='lg:text-[36px] text-[44px]' />
+        <Logo size='lg:text-[60px] text-[34px]' />
       </div>
     </div>
   );

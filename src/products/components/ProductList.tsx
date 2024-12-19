@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import SingleProduct from './SingleProduct';
 import { useProducts } from '@products/hooks/useProducts';
 
@@ -7,14 +6,12 @@ export default function ProductList() {
 
   return (
     <div className='w-full flex-grow grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-10 '>
-      <AnimatePresence>
-        {filteredProducts.map((product) => (
-          <SingleProduct
-            key={product.id}
-            product={product}
-          />
-        ))}
-      </AnimatePresence>
+      {filteredProducts.map((product) => (
+        <SingleProduct
+          key={product.id}
+          product={product}
+        />
+      ))}
     </div>
   );
 }
