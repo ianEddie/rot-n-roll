@@ -27,8 +27,8 @@ export default function SingleProductInfo({
         transition={{ duration: 1 }}
         className='h-1/2 uppercase flex justify-between flex-col text-center text-balance'
       >
-        <strong className=''>{collection}</strong>
-        <span className='font-medium h-[40%] w-full flex items-center justify-center text-[12px]'>
+        <strong>{collection}</strong>
+        <span className='font-medium h-[40%] w-full flex items-center justify-center lg:text-[12px] text-[10px]'>
           "{name}"
         </span>
         <span className='font-medium'>({year})</span>
@@ -40,7 +40,7 @@ export default function SingleProductInfo({
       </picture>
       {/* LOGO */}
       <div className='w-full flex justify-center items-center relative h-[10%]'>
-        <Logo size='60' />
+        <Logo size='lg:text-[36px] text-[44px]' />
       </div>
     </div>
   );

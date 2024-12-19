@@ -19,7 +19,7 @@ export default function SingleProductDescription({ collection, name }: Props) {
           writingMode: 'vertical-lr',
           textOrientation: 'sideways'
         }}
-        className='text-[32px] pl-2 '
+        className='lg:text-[28px] text-[24px] pl-1 flex justify-center items-center'
       >
         {collection}
       </span>
@@ -29,7 +29,7 @@ export default function SingleProductDescription({ collection, name }: Props) {
           writingMode: 'vertical-lr',
           textOrientation: 'sideways'
         }}
-        className='text-[22px] truncate h-1/2 text-end'
+        className='lg:text-[22px] text-[20px] truncate h-1/2 text-end'
       >
         {name}
       </span>
